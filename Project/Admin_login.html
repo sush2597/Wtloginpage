@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {font-family: Source Sans Pro;}
+       
+        input[type=text], input[type=password] {
+            width: 30%;
+            padding: 12px 20px;
+            background-color: #ebeff0;
+            color: rgb(10, 10, 10);
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;   
+        }
+        
+
+
+.Login-heading {  
+    padding: 50px;  
+  background-color: lightblue;  
+} 
+
+  
+}
+</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<script defer src="Admin_login.js"></script>
+</head>
+<body >
+   
+<center>
+  <h2>Admin Login</h2>
+
+
+  <div class = "Login-heading">
+      <form id="login-form">
+      <div class = "textfield">
+        <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+        </div>
+          <div class = "textfield">
+        <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
+        </div>
+        <input type="submit"  class="button" value="Login" id="login-form-submit">
+      </form>
+</center>
+</body>
+</html>

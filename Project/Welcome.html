@@ -1,0 +1,132 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<style>  
+body{  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: pink;  
+}  
+.container {  
+    padding: 50px;  
+  background-color: lightblue;  
+}  
+  
+input[type=text], input[type=password], textarea {  
+  width: 50%;  
+  padding: 15px;  
+  margin: 5px 0 22px 0;  
+  display: inline-block;  
+  border: none;  
+  background: #f1f1f1;  
+}  
+input[type=number], textarea {  
+  width: 10%;  
+  padding: 15px;  
+  margin: 5px 0 22px 0;  
+  display: inline-block;  
+  border: none;  
+  background: #f1f1f1;  
+} 
+input[type=text]:focus, input[type=password]:focus {  
+  background-color: rgb(184, 222, 248);  
+  outline: none;  
+}  
+ div {  
+            padding: 10px 0;  
+         }  
+hr {  
+  border: 1px solid #f1f1f1;  
+  margin-bottom: 25px;  
+}  
+.button {  
+  background-color: #4CAF50;  
+  color: white;  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  border: none;  
+  cursor: pointer;  
+  width: 10%;  
+  opacity: 0.9;  
+}  
+.registerbtn:hover {  
+  opacity: 1;  
+}  
+</style>    
+<body>  
+
+
+  <div class="container"> 
+  
+  <center>  <h1> Student Details</h1> </center>  
+  <hr>  
+  <label><b>USN</b> </label>   <br>
+    <input type="text" name="usn" size="15" required />  <br> 
+    <label><b>Name</b> </label> <br>  
+    <input type="text" id="aname"><br>   
+  
+<label> <b>Department </b></label><br>  
+<input type="radio" value="CSE" name="cse" > CSE   
+<input type="radio" value="Mech" name="Mech" > Mech  
+<input type="radio" value="Civil" name="Civil" > Civil 
+<input type="radio" value="EC" name="EC" > EC
+<input type="radio" value="EEE" name="EEE" > EEE <br><br>
+  
+
+<label> <b>Marks </b>  </label> <br> 
+<label for="name">CNS</label>
+<input type="text" id="cns"><br>
+<label for="name">DAA</label> 
+<input type="text" id="daa"><br>
+<label for="name">DCC</label>
+<input type="text" id="dcc"> <br>
+<label for="name">BDA</label>
+<input type="text" id="bda"> <br>
+
+  
+     
+<input type="submit" value="Enter" onclick="Sub()">
+   
+<table border="1" cellspacing="5" bgcolor="white"
+    height="50" width="500" cellpadding="5" id="TableScore">
+    <center>  <h1> Students Result</h1> </center>
+    <tr>
+      <th width="180">Name</th>
+      <th>Total</th>
+    </tr>
+    
+  </table>
+
+
+</div>  
+</form> 
+ 
+<script type="text/javascript">
+  function Sub(){
+    var n, k, r, e, v, sum;
+    n=(document.getElementById('aname').value);
+    k=parseFloat(document.getElementById('cns').value);
+    r=parseFloat(document.getElementById('daa').value);
+    e=parseFloat(document.getElementById('dcc').value);
+    v=parseFloat(document.getElementById('bda').value);
+
+    sum=k+r+e+v;
+   
+   
+    var newTable = document.getElementById('TableScore');
+    var row = newTable.insertRow(-1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(0);
+
+    cell1.innerHTML= sum;
+    cell2.innerHTML=n;
+  
+
+    
+  }
+</script>
+    
+
+</body>  
+
+</html>  
